@@ -9,7 +9,7 @@
 ## 最佳实践
 
 ### 1. 准备工作
-1. 根据系统不同，在Release中下载对应的可执行文件
+1. 根据系统不同，在[Release](https://github.com/YiqinXiong/merge-pdf-tool/releases) 或 [Gitee发行库](https://gitee.com/yiqin0411/merge-pdf-tool/releases)中下载对应的可执行文件
 2. 各张发票已按照SVN中要求的格式命名
 
 ### 2. 合并PDF
