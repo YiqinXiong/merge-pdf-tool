@@ -5,7 +5,7 @@ Author: yqxiong
 Date: 2024-09-09
 """
 
-import os
+import os, sys
 from PyPDF2 import PdfReader, PdfWriter
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
@@ -15,7 +15,9 @@ from tkinter import Tk, filedialog, messagebox
 
 # 注册字体
 def register_font():
-    font_path = "resources/msyh.ttc"  # 微软雅黑字体
+    font_path = "resources/msyh.ttc"
+    if hasattr(sys, '_MEIPASS'):
+        font_path = os.path.join(getattr(sys, '_MEIPASS'), font_path)
     pdfmetrics.registerFont(TTFont('MicrosoftYaHei', font_path))
 
 # 缩放 PDF 页面至 A4 尺寸
